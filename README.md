@@ -1,21 +1,21 @@
-#  Employee Data: Cleaning & Exploratory Analysis
+# Workforce Analytics Pipeline: Python EDA & Power BI Dashboard
 
-## Project Objective
-This project focuses on transforming a "messy" administrative dataset into a clean, actionable format for analysis. The goal was to identify key workforce trends while navigating common real-world data issues like missing values and extreme outliers.
+Project Objective
+This project demonstrates an end-to-end data workflow—from cleaning a highly "messy" administrative dataset using Python to creating a professional executive dashboard in Power BI.
 
-## 🛠️ Data Cleaning Process
-Before analysis, I performed several critical cleaning steps to ensure the accuracy of the insights:
-- **Outlier Removal:** Identified that the 'Salary' column contained phone numbers (values over $10 Billion). I filtered the dataset to include only realistic salaries ($10k - $300k).
-- **Handling Missing Data:** Filled missing 'Age' entries using the median value to maintain dataset size without biasing the mean.
-- **Feature Engineering:** Split the combined `Department_Region` column into two separate attributes for better granularity.
-- **Standardization:** Unfied the casing for categorical columns (Status, Performance) and standardized date formats.
+##  Phase 1: Data Cleaning (Python)
+Using a Google Colab environment, I performed critical cleaning steps on 1,000+ employee records:
+- [cite_start]**Outlier Removal:** Identified and filtered "salary" entries that were actually phone numbers (values > $10B)[cite: 52].
+- **Missing Data:** Handled 20% missing 'Age' data using median imputation.
+- **Feature Engineering:** Decoupled `Department_Region` into separate columns for granular analysis.
 
-## Key Insights
-1. **Salary Distribution:** Most employees earn between $50,000 and $80,000, which was only visible after removing the multi-billion dollar outliers.
-2. **Age vs. Salary Correlation:** My analysis (using jittered scatter plots) shows a **flat trend line**, indicating that age is not a primary driver of salary in this specific organization.
-3. **Departmental Spending:** Identified which departments carry the highest average payroll through sorted bar visualizations.
+##  Phase 2: Interactive Dashboard (Power BI)
+I built a high-level summary dashboard for HR managers, focusing on:
+- **Headcount Trends:** Visualizing the 2023 hiring surge.
+- **Regional Distribution:** A treemap of the workforce across key states.
+- **Payroll Insights:** Average salary breakdown by department, filtered to exclude outliers ($10k - $300k).
 
-## Repository Contents
-- `project_EDA_emp_dataset.ipynb`: The full Python code and visualizations.
-- `Messy_Employee_dataset.csv`: The original raw data.
-- `Cleaned_Employee_Data.csv`: The final processed dataset ready for reporting.
+## 📂 Repository Contents
+- `project_EDA_emp_dataset.ipynb`: Python cleaning logic and deep-dive jitter plots.
+- `emp_insight_dashboard.pbix`: The interactive Power BI file.
+- `Cleaned_Employee_Data.csv`: The final dataset used for the dashboard.
