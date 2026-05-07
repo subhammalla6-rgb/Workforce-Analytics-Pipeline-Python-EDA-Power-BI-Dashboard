@@ -10,6 +10,7 @@ Using a Google Colab environment, I performed critical cleaning steps on 1,000+ 
 - **Feature Engineering:** Decoupled `Department_Region` into separate columns for granular analysis.
 
 ##  Phase 2: Interactive Dashboard (Power BI)
+![Dashboard Preview](dashboard_preview.png)
 I built a high-level summary dashboard for HR managers, focusing on:
 - **Headcount Trends:** Visualizing the 2023 hiring surge.
 - **Regional Distribution:** A treemap of the workforce across key states.
